@@ -1,24 +1,60 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "T\u00ean s\u1ea3n ph\u1ea9m"
+    },
+    "description": {
+      "type": "string",
+      "description": "M\u00f4 t\u1ea3 s\u1ea3n ph\u1ea9m"
+    },
+    "price": {
+      "type": "number",
+      "description": "Gi\u00e1 (VN\u0110)"
+    },
+    "original_price": {
+      "type": "number",
+      "description": "Gi\u00e1 g\u1ed1c"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "\u1ea2nh s\u1ea3n ph\u1ea9m"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Tr\u00e0 xanh",
+        "Tr\u00e0 \u01b0\u1edbp h\u01b0\u01a1ng",
+        "Tr\u00e0 t\u00fai l\u1ecdc",
+        "Qu\u00e0 t\u1eb7ng"
+      ],
+      "description": "Danh m\u1ee5c"
+    },
+    "weight": {
+      "type": "string",
+      "description": "Kh\u1ed1i l\u01b0\u1ee3ng"
+    },
+    "is_featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "shopee_url": {
+      "type": "string",
+      "description": "Link Shopee"
+    },
+    "tiktok_url": {
+      "type": "string",
+      "description": "Link TikTok Shop"
+    },
+    "stock": {
+      "type": "number",
+      "default": 100
+    }
+  },
+  "required": [
+    "name",
+    "price"
+  ]
+}
